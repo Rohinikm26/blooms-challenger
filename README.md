@@ -65,9 +65,7 @@ graph TD
     
     subgraph "The Brain"
         AgentA[🌻 Agent 1: The Challenger]
-        AgentA -- "Socratic Response" --> UI[💬 Streamlit Interface]
-        
-        UI --> AgentB[⚖️ Agent 2: The Evaluator]
+        AgentA -- "Socratic Response" --> AgentB[⚖️ Agent 2: The Evaluator]
         AgentB -- "Analyzes History" --> State{Check State}
     end
     
@@ -183,4 +181,5 @@ Voice-to-Voice Debate: Enable Audio Input/Output so users can practice verbal ar
 
 
 Visual "Garden" Generation: Use Imagen 3 to generate a dynamic image of a plant that blooms or withers based on the debate quality.
+
 
