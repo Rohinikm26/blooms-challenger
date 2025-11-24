@@ -61,9 +61,9 @@ The system follows a **Human-in-the-Loop Sequential Architecture**.
 ```mermaid
 graph TD
     User[👤 User Input] --> Tool[🛠️ Tool: Logic Pruner]
-    Tool -- "JSON Report (Fallacies Found)" --> AgentA
+    Tool -- "JSON Report" --> AgentA
     
-    subgraph "The Brain (Sequential Agents)"
+    subgraph "The Brain"
         AgentA[🌻 Agent 1: The Challenger]
         AgentA -- "Socratic Response" --> UI[💬 Streamlit Interface]
         
@@ -71,10 +71,11 @@ graph TD
         AgentB -- "Analyzes History" --> State{Check State}
     end
     
-    State -- "Growth Detected (3 Rounds)" --> Win[🏆 WIN STATE: Full Bloom]
-    State -- "Fallacies/Weak Logic" --> Lose[🥀 LOSE STATE: Withered]
-    State -- "Keep Going" --> Loop[🔄 Continue Debate]
-    Here is your complete, professional README.md file.
+    State -- "Growth Detected" --> Win[🏆 WIN STATE: Full Bloom]
+    State -- "Fallacies Found" --> Lose[🥀 LOSE STATE: Withered]
+    State -- "Keep Going" --> DebateLoop[🔄 Continue Debate]
+```
+    
 
 I have formatted it with GitHub-ready Markdown, including a Mermaid.js diagram for your architecture (which renders automatically on GitHub) and professional badges.
 
@@ -269,5 +270,6 @@ Integrate "Grounding" with Google Search: Add a tool to fact-check user claims i
 Long-Term Memory: Implement a Vector Database (ChromaDB) to track a user's debate history over weeks (e.g., "You're getting better at avoiding Strawman arguments!").
 
 Voice-to-Voice Debate: Enable Audio Input/Output so users can practice verbal argumentation.
+
 
 Visual "Garden" Generation: Use Imagen 3 to generate a dynamic image of a plant that blooms or withers based on the debate quality.
