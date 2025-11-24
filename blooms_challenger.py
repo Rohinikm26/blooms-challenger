@@ -1,5 +1,4 @@
 import os
-import streamlit as st
 import json
 import time
 from typing import List, Dict
@@ -177,4 +176,5 @@ def run_blooms_garden():
             print(f"--- Growth Stage {session.round_count} Complete ---\n")
 
 if __name__ == "__main__":
+
     run_blooms_garden()
